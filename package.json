@@ -10,7 +10,7 @@
     "minimist": "~1.2.0",
     "async": "~1.4.2",
     "ejs": "~2.3.4",
-    "node-pngjs": "~0.0.4"
+    "node-pngjs": "~0.0.3"
   },
   "keywords": [
     "css sprites",
@@ -28,7 +28,7 @@
     "url": "https://github.com/pillys/spritesify",
     "type": "git"
   },
-  "version": "0.0.7",
+  "version": "0.0.8",
   "readmeFilename": "README.md",
   "license": "MIT",
   "bugs": {
