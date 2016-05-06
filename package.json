@@ -2,12 +2,11 @@
   "author": {
     "name": "pillys",
     "email": "pillys@163.com",
-    "url": "http://www.qianduan.co"
+    "url": "http://www.qque.com"
   },
   "dependencies": {},
-  "description": "auto css sprites tools, auto combo png files to a single or more, then create the css code or file.",
+  "description": "png 图标自动合并工具",
   "dependencies": {
-    "minimist": "~1.2.0",
     "async": "~1.4.2",
     "ejs": "~2.3.4",
     "node-pngjs": "~0.0.3"
@@ -28,7 +27,7 @@
     "url": "https://github.com/pillys/spritesify",
     "type": "git"
   },
-  "version": "0.0.8",
+  "version": "0.1.0",
   "readmeFilename": "README.md",
   "license": "MIT",
   "bugs": {
