@@ -20,14 +20,11 @@
   ],
   "main": "index.js",
   "name": "spritesify",
-  "bin": {
-    "spritesify": "./bin/spritesify"
-  },
   "repository": {
     "url": "https://github.com/pillys/spritesify",
     "type": "git"
   },
-  "version": "0.1.0",
+  "version": "0.2.0",
   "readmeFilename": "README.md",
   "license": "MIT",
   "bugs": {
