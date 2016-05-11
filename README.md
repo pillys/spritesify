@@ -12,10 +12,11 @@ npm install spritesify --save
 ```
 var sprites = require('spritesify');
 
-sprites(runPath, cssPath, urlFix, function(err){
+sprites(runPath, cssPath, urlFix, function(err, content){
     if(err) {
         console.log(err);
     } else {
+        console.log(content);
         console.log('done');
     }
 });
@@ -62,9 +63,9 @@ sprites(runPath, cssPath, urlFix, function(err){
 ## 参数
 
 * runPath：运行目录（指 ``spritesify/`` 所在的父级目录）
-* cssPath：索要生成或合并的 css 文件路径，如果不需要写入 css，该项请传入 ``''``
+* cssPath：索要生成或合并的 css 文件路径，如果不需要写入 css，该项请传入 ``false``
 * urlFix：需要设置的 ``http`` 全路径，如果不需要全路径，该项传入 ``''``
-* callback：回调函数
+* callback：回调函数，带有两个参数：``err``，``content``
 
 ## HTML 用法
 ```html
