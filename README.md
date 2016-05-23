@@ -9,21 +9,53 @@ npm install spritesify --save
 ```
 
 ## 引用
-```
-var sprites = require('spritesify');
 
-sprites(runPath, cssPath, urlFix, function(err, content){
-    if(err) {
-        console.log(err);
-    } else {
-        console.log(content);
-        console.log('done');
-    }
+```
+var Spritesify = require('spritesify');
+
+var spritesify = new Spritesify(spritespath, urlfix);
+```
+
+### 参数
+
+* spritespath：小图标所在目录
+* urlfix：生成的 css 代码中，图片的网址或路径
+
+### 示例
+```
+var spritesify = new Spritesify('./icons/spritesify', 'http://www.qque.com/');
+```
+
+## spritesify.css(dirpath[, csspath], callback)
+
+生成小图标，并根据传入的 ``csspath`` 生成 css 文件，最后返回生成的 css 代码
+
+### 参数
+
+* dirpath：图标目录（指 ``spritesify/`` 所在的父级目录）
+* csspath：要生成或合并的 css 文件路径，如果不需要写入 css，该项请省略
+* callback：回调函数，带有两个参数：``err``，``content``
+
+### 示例
+
+编译 ``./icons/spritesify`` 目录下的图标，并生成 css：
+
+```
+spritesify.css('./icons/', function(err, data) {
+  //...
+  console.log(data);
 });
 ```
 
+编译 ``./icons/spritesify`` 目录下的图标，并生成 css，保存至 ``../css/style.css`` 文件：
 
-## 基本的目录结构
+```
+spritesify.css('./icons/', '../css/style.css', function(err, data) {
+  //...
+});
+```
+
+## 基本的目录结构参考
 
 ```
 [运行目录]
@@ -59,13 +91,6 @@ sprites(runPath, cssPath, urlFix, function(err, content){
 * 其它不同尺寸的图标放入 ``~othername`` 目录中
 
 当使用 ``spritesify`` 编译时，将会生成 icona.png / pica.png.
-
-## 参数
-
-* runPath：运行目录（指 ``spritesify/`` 所在的父级目录）
-* cssPath：索要生成或合并的 css 文件路径，如果不需要写入 css，该项请传入 ``false``
-* urlFix：需要设置的 ``http`` 全路径，如果不需要全路径，该项传入 ``''``
-* callback：回调函数，带有两个参数：``err``，``content``
 
 ## HTML 用法
 ```html
