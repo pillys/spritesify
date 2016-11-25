@@ -4,13 +4,13 @@
     "email": "pillys@163.com",
     "url": "http://www.qque.com"
   },
-  "dependencies": {},
-  "description": "png 图标自动合并工具",
   "dependencies": {
     "async": "~1.4.2",
     "ejs": "~2.3.4",
+    "fs-path": "0.0.23",
     "node-pngjs": "~0.0.3"
   },
+  "description": "png 图标自动合并工具",
   "keywords": [
     "css sprites",
     "sprites",
@@ -24,7 +24,7 @@
     "url": "https://github.com/pillys/spritesify",
     "type": "git"
   },
-  "version": "1.2.0",
+  "version": "1.4.0",
   "readmeFilename": "README.md",
   "license": "MIT",
   "bugs": {
